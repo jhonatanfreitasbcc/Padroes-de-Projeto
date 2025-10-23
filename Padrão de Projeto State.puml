@@ -1,0 +1,21 @@
+@startuml
+title Padrão Comportamental - State
+
+interface Estado {
+    +acao() : void
+}
+
+class EstadoConcretoA implements Estado
+class EstadoConcretoB implements Estado
+
+class Contexto {
+    -estado : Estado
+    +definirEstado(e : Estado)
+    +solicitar()
+}
+
+Contexto --> Estado
+Estado <|.. EstadoConcretoA
+Estado <|.. EstadoConcretoB
+
+@enduml
