@@ -1,0 +1,34 @@
+@startuml
+title Padrão de Projeto - Prototype
+
+interface Prototype {
+    +clone() : Prototype
+}
+
+class ConcretePrototypeA implements Prototype {
+    -atributoA : String
+    +clone() : Prototype
+}
+
+class ConcretePrototypeB implements Prototype {
+    -atributoB : int
+    +clone() : Prototype
+}
+
+class Client {
+    -prototype : Prototype
+    +operation() : void
+}
+
+Prototype <|.. ConcretePrototypeA
+Prototype <|.. ConcretePrototypeB
+Client --> Prototype : "usa o protótipo\npara clonar objetos"
+
+note right of Prototype
+O padrão Prototype permite
+criar novos objetos copiando
+instâncias existentes (protótipos),
+em vez de criá-los do zero.
+end note
+
+@enduml
