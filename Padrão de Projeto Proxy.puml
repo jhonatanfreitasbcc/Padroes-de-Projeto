@@ -1,0 +1,26 @@
+@startuml
+title Padrão Estrutural - Proxy
+
+interface Assunto {
+    +requisicao() : void
+}
+
+class AssuntoReal implements Assunto {
+    +requisicao() : void
+}
+
+class Proxy implements Assunto {
+    -assuntoReal : AssuntoReal
+    +requisicao() : void
+}
+
+Assunto <|.. AssuntoReal
+Assunto <|.. Proxy
+Proxy --> AssuntoReal
+
+note right of Proxy
+Controla o acesso ao objeto real,
+adiando sua criação ou adicionando segurança.
+end note
+
+@enduml
