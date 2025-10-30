@@ -1,4 +1,4 @@
-# 📂 Padrões de Projeto
+# 🧩 Onde São Usados os Padrões de Projeto (Prototype, Proxy e State)
 
 ---
 
@@ -50,4 +50,7 @@ O **State** é um padrão **comportamental** que permite que um objeto **altere 
 
 ---
 
-💡 **Observação:** Foi usado o **ChatGPT** para as escritas e o **PlantUML** para gerar os diagramas UML.
+💡 **Observação:** Foi usado o **ChatGPT** para as escritas e o **PlantUML** para gerar os diagramas UML.  
+
+📚 **Referência:**  
+Conteúdo baseado e adaptado a partir do site [Refactoring Guru](https://refactoring.guru/pt-br/design-patterns).
